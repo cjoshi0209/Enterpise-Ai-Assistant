@@ -1,0 +1,16 @@
+agents:
+  planner: rule-based   # swap for "gpt-4" to use an LLM-driven planner
+  retriever: tfidf       # swap for "text-embedding-ada-002" for OpenAI embeddings
+  responder: extractive  # swap for "gpt-4" for generative synthesis
+
+retrieval:
+  top_k: 5
+  similarity_threshold: 0.15
+  chunk_size: 512
+
+memory:
+  window_size: 10
+  backend: in-memory   # swap for "redis" in production
+
+rbac:
+  roles: [admin, analyst, viewer]
